@@ -13,9 +13,7 @@ mongoose.connect(process.env.MONGO_URI).then(() => console.log('MongoDB connecte
 app.use(cors());
 app.use(express.json());
 
-app.use('/',()=>{
-  res.send("Hello Eazy-biznus Backend is live");
-})
+
 app.use('/api', authRoutes);
 
 app.listen(process.env.PORT, () => {
